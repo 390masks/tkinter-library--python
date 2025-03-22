@@ -4,7 +4,7 @@ window.title("Form")
 window.geometry("900x900")
 window.configure(bg="light blue")
 
-lb=Label(window,text="Best Technologyes \n Enqurey Form",font=16,fg="red")
+lb=Label(window,text="Besent Technologies \n Enqurey Form",font=16,fg="red")
 lb.pack()
 
 frame1=Frame(window,bg="light blue")
