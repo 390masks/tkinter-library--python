@@ -1,4 +1,37 @@
 from tkinter import *
+
+def submitForm():
+  data={
+    "Date":t1.get(),
+    "Name":t2.get(),
+    "Mobile No":t3.get(),
+    "Alternate No":t4.get(),
+    "Email Id":t5.get(),
+    "Address":t6.get(),
+    "Conrses Interested":t7.get(),
+    "Batch Preferred":t8.get(),
+    "How you came to know about us":t9.get(),
+    "Experienced or Fresher":t10.get(),
+    "Contact person from Besent Technologies":t11.get(),
+    "Counselor":t12.get(),
+    "Fees":t13.get(),
+    "Comment":t14.get(),
+    "Enquiry":"Yes" if var1.get() == 1 else "No",
+    "Registration":"Yes" if var2.get()==1 else "No"
+  }
+
+  # for key,value in data.items():
+  #   print(f"{key}: {value}" )
+
+  with open("enquiryData.txt","a") as file:
+    file.write("Form Submission: \n")
+    for key,value in data.items():
+      file.write(f"{key}  : {value}\n")
+    file.write("_"*50+"\n")
+
+  print("Data Saved successfully")
+
+
 window=Tk()
 window.title("Form")
 window.geometry("900x900")
